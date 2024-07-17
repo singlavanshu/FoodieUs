@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order - FoodieUs</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo_website.avif" alt="FoodieUs Logo">
+                </a>
+                <span class="brand-name">FoodieUs</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a id="signin-btn">Sign In</a></li>
+                    <li><a id="signup-btn">Sign Up</a></li>
+            </ul>
+            <!-- // <div class="auth-links">
+             //   <a href="#sign-in" class="auth-button">Sign In</a>
+            //    <a href="#sign-up" class="auth-button">Sign Up</a>
+            </div> -->
+            
+        </nav>
+        </header>
+        <div id="signin-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign In</h2>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn">Sign In</button>
+                </form>
+                <p class="or-divider">or</p>
+                <a href="#" class="google-signup">Sign Up with Google</a>
+                <p>Don't have an account? <a href="#signup-btn" id="signup-link">Sign Up</a></p>
+            </div>
+        </div>
+    
+        <!-- Sign-up Modal -->
+        <div id="signup-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p class="or-divider">or</p>
+                <a href="#" class="google-signup">Sign Up with Google</a>
+                <p>Already have an account? <a href="#signin-btn" id="signin-link">Sign In</a></p>
+            </div>
+        </div>
+
+        <section id="categories">
+            <h2>Choose Category</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <img src="chole_bhature.jpg" alt="North Indian Cuisine">
+                    <h3>North Indian</h3>
+                    <p>Delicious dishes from the northern regions of India.</p>
+                    <a href="NorthIndian.html" class="btn">Order</a>
+                </div>
+                <div class="category-item">
+                    <img src="manchurian-.webp" alt="Chinese Cuisine">
+                    <h3>Chinese</h3>
+                    <p>Savor the flavors of authentic Chinese cuisine.</p>
+                    <a href="chinese.html" class="btn">Order</a>
+                </div>
+                <div class="category-item">
+                    <img src="idli.jpg" alt="South Indian Cuisine">
+                    <h3>South Indian</h3>
+                    <p>Explore the diverse tastes of southern India.</p>
+                    <a href="south_indian.html" class="btn">Order</a>
+                </div>
+                <div class="category-item">
+                    <img src="white_sauce.jpg" alt="Italian Cuisine">
+                    <h3>Italian</h3>
+                    <p>Indulge in classic Italian flavors.</p>
+                    <a href="italian.html" class="btn">Order</a>
+                </div>
+                
+                
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items dynamically added -->
+            </div>
+            <div class="cart-summary">
+                <p>Total: <span id="cartTotal">$0.00</span></p>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-clear">Clear Cart</button>
+                <button class="btn-checkout">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+</div>
+<footer>
+    <p>&copy; 2024 FoodieUs. All rights reserved.</p>
+</footer>
+
+    <script src="order.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

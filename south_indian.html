@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian - FoodieUs</title>
+    <link rel="stylesheet" href="North_style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo_website.avif" alt="FoodieUs Logo">
+                </a>
+                <span class="brand-name">FoodieUs</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a id="signin-btn">Sign In</a></li>
+                    <li><a id="signup-btn">Sign Up</a></li>
+            </ul>
+            <!-- // <div class="auth-links">
+             //   <a href="#sign-in" class="auth-button">Sign In</a>
+            //    <a href="#sign-up" class="auth-button">Sign Up</a>
+            </div> -->
+            
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="menu-category">
+            <h1>South Indian Cuisine</h1>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <img src="idli.jpg" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Idli Sambhar</h3>
+                        <p>Idli is a type of savory rice cake, originating from the Indian subcontinent, popular as a breakfast food in Southern India and in Sri Lanka. Now can be in whole India</p>
+                        <span class="price">Rs. 160</span>
+                        
+                    </div>
+                </div>
+                <!-- Repeat for more dishes -->
+                <div class="menu-item">
+                <img src="dosa.webp" alt="Butter Chicken">
+                <div class="menu-info">
+                    <h3>Dosa</h3>
+                    <p>T The humble dosa is an ode to the never-ending love between the people of this country and rice.</p>
+                    <span class="price">Rs. 255</span>
+                    
+                </div>
+            </div>
+            <div class="menu-item">
+                    <img src="vada.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Vada</h3>
+                        <p>Category of savory fried snacks from India. Different types of vadas can be described as fritters, cutlets, donuts, or dumplings.</p>
+                        <span class="price">Rs. 200</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="puttu.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Puttu</h3>
+                        <p>Puttu means “portioned” in Tamil and Malayalam. It is a dish made of steamed cylinders of ground rice layered with coconut shavings, sometimes with a sweet or savory filling.</p>
+                        <span class="price">Rs. 250</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="pongal.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Pongal</h3>
+                        <p>Pongal, or huggi, is a popular South Indian rice dish. In Tamil “pongal” means “to boil” or “bubbling up”</p>
+                        <span class="price">Rs. 280</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="pesarattu.webp"Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Pesarattu</h3>
+                        <p>Pesarattu, pesara attu, pesara dosa (mung bean dosa), or cheeldo is crepe-like bread, originating in Andhra Pradesh, India, that is similar to dosa.</p>
+                        <span class="price">Rs. 320</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="sambhar.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Sambhar</h3>
+                        <p>Each south Indian state has its own sambar and takes pride in the diverse variety available in the country..</p>
+                        <span class="price">Rs. 120</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="appam.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Appam</h3>
+                        <p>Plain appam or vella appam are bowl-shaped thin pancakes made from fermented rice flour.</p>
+                        <span class="price">Rs. 290</span>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Don't have an account? <a href="#signup-btn" id="signup-link">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign-up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Already have an account? <a href="#signin-btn" id="signin-link">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

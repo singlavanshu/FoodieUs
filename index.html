@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieUs - Food Delivery</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo_website.avif" alt="FoodieUs Logo">
+                </a>
+                <span class="brand-name">FoodieUs</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+                <li id="authLinks"><a id="signin-btn" class="signInLink" onclick="showSignIn()"">Sign In</a></li>
+                    <li id="authLinks"><a id="signup-btn" class="signUpLink" onclick="showSignUp()">Sign Up</a></li>
+                    <li id="profileDropdown" class="dropdown" style="display: none;">
+                        <a href="#" class="profile-icon" onclick="toggleDropdown()">👤</a>
+                        <div id="profileMenu" class="dropdown-content">
+                            <a href="orders.html">Previous Orders</a>
+                            <a href="account.html">Account</a>
+                            <a href="#" onclick="logout()">Log Out</a>
+                        </div>
+                    </li>
+            </ul>
+            <!-- // <div class="auth-links">
+             //   <a href="#sign-in" class="auth-button">Sign In</a>
+            //    <a href="#sign-up" class="auth-button">Sign Up</a>
+            </div> -->
+            
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to FoodieUs</h1>
+            <p>Delicious food delivered to your door, quickly and conveniently.</p>
+            <a href="menu.html" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="feature-icon fas fa-utensils"></i>
+                <h3 class="feature-title">Delicious Meals</h3>
+                <p class="feature-description">Enjoy a wide variety of delicious meals crafted with fresh ingredients.</p>
+            </div>
+            <div class="feature-item">
+                <i class="feature-icon fas fa-clock"></i>
+                <h3 class="feature-title">Quick Delivery</h3>
+                <p class="feature-description">Fast and reliable delivery service to your doorstep, ensuring your meal is always fresh.</p>
+            </div>
+            <div class="feature-item">
+                <i class="feature-icon fas fa-heart"></i>
+                <h3 class="feature-title">Customer Satisfaction</h3>
+                <p class="feature-description">Dedicated to providing exceptional customer service and ensuring your satisfaction.</p>
+            </div>
+            <div class="feature-item">
+                <i class="feature-icon fas fa-star"></i>
+                <h3 class="feature-title">High Quality</h3>
+                <p class="feature-description">Commitment to high-quality standards in every meal we prepare and deliver.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="popular-dishes">
+        <h2>Popular Dishes</h2>
+        <div class="dishes-carousel">
+            <div class="dish-item">
+                <img src="pasta.webp" alt="Popular Dish 1">
+                <div class="dish-detail">
+                <h3>White Sauce Pasta</h3>
+                <p>Italian dish in Indian Style. Just try it and You will forget about Italian</p>
+                <button class="order-button">Order Now</button>
+                </div>
+            </div>
+            <div class="dish-item">
+                <img src="manchurian-.webp" alt="Popular Dish 2">
+                <h3>Manchurian</h3>
+                <p>Its manchurian or can say heart steal. eat it once you deliver it times.</p>
+                <button class="order-button">Order Now</button>
+            </div>
+            <div class="dish-item">
+                <img src="idli.jpg" alt="Popular Dish 3">
+                <h3>Idli-sambhar</h3>
+                <p>Searching for South Indian, here you are FoodieUs. Most rated dish of ours.</p>
+                <button class="order-button">Order Now</button>
+            </div>
+            <!-- Add more dish items -->
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <blockquote>Great service and delicious food!</blockquote>
+            <blockquote>Quick delivery and friendly staff.</blockquote>
+            <blockquote>My go-to place for ordering in.</blockquote>
+            <blockquote>Amazing variety and quality!</blockquote>
+        <blockquote>Best food delivery service I've used.</blockquote>
+        <blockquote>Always on time and tasty food.</blockquote>
+        <blockquote>Excellent customer service!</blockquote>
+        <blockquote>Highly recommended for food lovers.</blockquote>
+        <blockquote>Never disappointed with their meals.</blockquote>
+        <blockquote>Perfect for a quick and tasty meal.</blockquote>
+        </div>
+        <button id="show-more-btn">Show More</button>
+    </section>
+
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignIn()">&times;</span>
+            <h2>Sign In</h2>
+            <form action="#" onsubmit="handleSignIn(event)" method="POST">
+                <input type="email" id="signInEmail" placeholder="Email" required>
+                <input type="password" id="signInPassword" placeholder="Password" required>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Don't have an account? <a href="#" id="signup-link" onclick="showSignUpInstead()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign-up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignUp()" >&times;</span>
+            <h2>Sign Up</h2>
+            <form action="#" id="signUpForm" onsubmit="handleSignUp(event)" method="POST">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" id="signUpEmail" required>
+                <input type="password" placeholder="Password" id="signUpPassword" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup" onclick="handleGoogleSignUp()">Sign Up with Google</a>
+            <p>Already have an account? <a href="#signin-btn" id="signin-link" onclick="showSignInInstead()">Sign In</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FoodieUs. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+    </body>
+</html>

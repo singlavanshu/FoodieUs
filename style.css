@@ -1,0 +1,406 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+
+header {
+    background-color: #4b2e20; /* Dark brown */
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 40px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 24px;
+    color: #dda15e; /* Dark yellow */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #dda15e; /* Dark yellow */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    background-color: #dda15e; /* Dark yellow */
+    color: #4b2e20; /* Dark brown */
+    border-radius: 4px;
+}
+
+.profile-icon {
+    font-size: 1.5em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5a3e1a; /* Brown color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffc107; /* Dark yellow */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #402910; /* Darker brown */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* .auth-links {
+    display: flex;
+}
+
+.auth-button {
+    color: #dda15e; 
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.auth-button:hover {
+    color: #e0a340; 
+} */
+
+.hero {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 150px 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #dda15e; /* Yellow */
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffd633; /* Darker yellow */
+}
+
+/* Styles for "Why Choose Us" section */
+.why-choose-us {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #dda15e; /* Yellow icon color */
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Black with transparency */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    position: relative;
+    text-align: center; /* Center content */
+    max-width: 400px; /* Max width for smaller screens */
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form input and button styles */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input[type=text],
+.modal-content input[type=email],
+.modal-content input[type=password] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    background-color: #ffbb33; /* Yellow */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #ffd633; /* Darker yellow */
+}
+
+/* Links and text styling */
+.modal-content .or-divider {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.modal-content a {
+    color: brown; /* Brown text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.modal-content a:hover {
+    color: yellow; /* Yellow on hover */
+}
+
+
+
+.popular-dishes {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.popular-dishes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    
+}
+
+.dishes-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.dish-item {
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.dish-item:hover {
+    transform: translateY(-5px);
+}
+
+.dish-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.dish-details {
+    margin-top: 10px;
+}
+
+.dish-details h3 {
+    margin-bottom: 10px;
+}
+
+.dish-details p {
+    margin-bottom: 15px; /* Space between description and button */
+}
+.order-button {
+    background-color: #dda15e; /* Yellow */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.order-button:hover {
+    background-color: #ffd633; /* Darker yellow */
+}
+
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonials-grid blockquote {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#show-more-btn {
+    background-color: #dda15e; /* Yellow */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+#show-more-btn:hover {
+    background-color: #ffd633; /* Darker yellow */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}

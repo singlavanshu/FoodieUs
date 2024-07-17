@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese - FoodieUs</title>
+    <link rel="stylesheet" href="North_style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo_website.avif" alt="FoodieUs Logo">
+                </a>
+                <span class="brand-name">FoodieUs</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a id="signin-btn">Sign In</a></li>
+                    <li><a id="signup-btn">Sign Up</a></li>
+            </ul>
+            <!-- // <div class="auth-links">
+             //   <a href="#sign-in" class="auth-button">Sign In</a>
+            //    <a href="#sign-up" class="auth-button">Sign Up</a>
+            </div> -->
+            
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="menu-category">
+            <h1>Chinese Cuisine</h1>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <img src="manchurian-.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Manchurian</h3>
+                        <p>Mann Churaane wali dish. Manchurian just try it once you will be thrilled!</p>
+                        <span class="price">Rs. 440</span>
+                        
+                    </div>
+                </div>
+                <!-- Repeat for more dishes -->
+                <div class="menu-item">
+                <img src="noodles.webp" alt="Butter Chicken">
+                <div class="menu-info">
+                    <h3>Noodles</h3>
+                    <p>One of the staples in every home, noodles are not just a kid's favourite snack to binge on but are also equally loved by adults.</p>
+                    <span class="price">Rs. 220</span>
+                    
+                </div>
+            </div>
+            <div class="menu-item">
+                    <img src="spring_rolls.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Spring Rolls</h3>
+                        <p>A crisp appetizer where shredded veggies are encased in thin sheets and then fried golden.</p>
+                        <span class="price">Rs. 140</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="torfu.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Stir Fried Tofu with Rice</h3>
+                        <p> A simple stir-fry with tofu and oriental sauces. Sti fried togu with rice is a great main course dish</p>
+                        <span class="price">Rs. 525</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="honey_chilli.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Honey Chilli Cauliflower</h3>
+                        <p>The quintessential Indo-Chinese snack! It has the perfect balance of sweet and spicy with sliced potatoes tossed with a host of sauces and spices.</p>
+                        <span class="price">Rs. 225</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="fried_rice.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Fried Rice</h3>
+                        <p>veg fried rice is a delicious recipe with the goodness of veggies like carrot, cabbage, beans along with baby corn, soy sauce, chillies and garlic. Perfect lunch or dinner option.</p>
+                        <span class="price">Rs. 70</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="soup.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Soup</h3>
+                        <p>A mix of hot and spicy flavours, vegetable manchow soup is packed with ginger, garlic,chillies, beans and the goodness of carrots, mushrooms and capsicums.</p>
+                        <span class="price">Rs. 150</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="momo.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Momos</h3>
+                        <p>One of the most loves street food from the north east, widely popular across northern India</p>
+                        <span class="price">Rs. 120</span>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Don't have an account? <a href="#signup-btn" id="signup-link">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign-up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Already have an account? <a href="#signin-btn" id="signin-link">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

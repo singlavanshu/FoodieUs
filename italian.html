@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian - FoodieUs</title>
+    <link rel="stylesheet" href="North_style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo_website.avif" alt="FoodieUs Logo">
+                </a>
+                <span class="brand-name">FoodieUs</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a id="signin-btn">Sign In</a></li>
+                    <li><a id="signup-btn">Sign Up</a></li>
+            </ul>
+            <!-- // <div class="auth-links">
+             //   <a href="#sign-in" class="auth-button">Sign In</a>
+            //    <a href="#sign-up" class="auth-button">Sign Up</a>
+            </div> -->
+            
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="menu-category">
+            <h1>Italian</h1>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <img src="pasta.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>White sauce Pasta</h3>
+                        <p>Italian dish in Indian style..Just try it you will love it...</p>
+                        <span class="price">Rs. 400</span>
+                        
+                    </div>
+                </div>
+                <!-- Repeat for more dishes -->
+                <div class="menu-item">
+                <img src="mushroom.webp" alt="Butter Chicken">
+                <div class="menu-info">
+                    <h3>Mushroom Risoto</h3>
+                    <p>A plateful of buttery risotto with the goodness of mushrooms. A healthy bowl of mushroom risotto has benefits more than you can think. </p>
+                    <span class="price">Rs. 390</span>
+                    
+                </div>
+            </div>
+            <div class="menu-item">
+                    <img src="panzella.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Panzenella</h3>
+                        <p>Panzenella is a Tuscan bread salad, ideal for summer.</p>
+                        <span class="price">Rs. 550</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="brushetta.jpg" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>bruschetta</h3>
+                        <p>An antipasto dish, bruschetta has grilled bread topped with veggies, rubbed garlic and tomato mix.</p>
+                        <span class="price">Rs. 440</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="corbona.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Pasta Carbonara</h3>
+                        <p>This simple Roman pasta dish derives its name from 'carbone' meaning coal. It was a pasta popular with the coal miners. </p>
+                        <span class="price">Rs. 666</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="pizz.webp"Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Pizza</h3>
+                        <p>One of the most loved Italian dishes, it just takes a few simple ingredients and you get insanely delicious results! </p>
+                        <span class="price">Rs. 550</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="tiramisu.jpg" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Tiramisu</h3>
+                        <p>The delightful tiramisu recipe with sponge fingers soaked in coffee, layered around and smeared with a creamy mascarpone mixture. The word 'tiramisu' in Italian means 'pick-me-up'.</p>
+                        <span class="price">Rs. 620</span>
+                        
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="lasagna.webp" alt="Butter Chicken">
+                    <div class="menu-info">
+                        <h3>Lasagna</h3>
+                        <p>Loaded with parmesan cheese and layered with a mix of vegetables, bacon strips and minced lamb, this lasagna recipe is nothing short of perfect.</p>
+                        <span class="price">Rs. 500</span>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Don't have an account? <a href="#signup-btn" id="signup-link">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign-up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p class="or-divider">or</p>
+            <a href="#" class="google-signup">Sign Up with Google</a>
+            <p>Already have an account? <a href="#signin-btn" id="signin-link">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

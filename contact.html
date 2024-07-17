@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-FoodieUs</title>
+    <link rel="stylesheet" href="contact.css">
+    
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo_website.avif" alt="FoodieUs Logo">
+                </a>
+                <span class="brand-name">FoodieUs</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a id="signin-btn">Sign In</a></li>
+                    <li><a id="signup-btn">Sign Up</a></li>
+            </ul>
+            <!-- // <div class="auth-links">
+             //   <a href="#sign-in" class="auth-button">Sign In</a>
+            //    <a href="#sign-up" class="auth-button">Sign Up</a>
+            </div> -->
+            
+        </nav>
+        </header>
+        <div id="signin-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign In</h2>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn">Sign In</button>
+                </form>
+                <p class="or-divider">or</p>
+                <a href="#" class="google-signup">Sign Up with Google</a>
+                <p>Don't have an account? <a href="#signup-btn" id="signup-link">Sign Up</a></p>
+            </div>
+        </div>
+    
+        <!-- Sign-up Modal -->
+        <div id="signup-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p class="or-divider">or</p>
+                <a href="#" class="google-signup">Sign Up with Google</a>
+                <p>Already have an account? <a href="#signin-btn" id="signin-link">Sign In</a></p>
+            </div>
+        </div>
+        <main class="container">
+            <section class="contact">
+                <h1>Contact Us</h1>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>We're here to help and answer any questions you might have. We look forward to hearing from you!</p>
+                        <ul>
+                            <li><strong>Address:</strong> 112 MultiComplex FoodieUs Banglore</li>
+                            <li><strong>Email:</strong> support@foodieus.com</li>
+                            <li><strong>Phone:</strong> 9899898981</li>
+                        </ul>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Contact Form</h2>
+                        <form id="contactForm" action="http://localhost:3000/submit-form" method="POST">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                            <button type="submit">Send Message</button>
+                        </form>
+                        <div id="successMessage" style="display:none;">
+                            <p style="font-weight: bold;">Form Submitted Succesfully! Will contact you soon.. Appreciate for you time</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="map">
+                <h2>Our Location</h2>
+                <iframe src="https://maps.google.com/maps?q=123%20Foodie%20Street,%20Flavor%20Town,%20FT%2012345&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+            </section>
+    
+            <section class="social-media">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+        
+</body>
+</html>
